@@ -1,0 +1,31 @@
+{
+  "name": "qa_automation_engineer_take_home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:chromium": "cross-env ENV=prod playwright test --project=chromium",
+    "test:firefox": "cross-env ENV=prod playwright test --project=firefox",
+    "test:webkit": "cross-env ENV=prod playwright test --project=webkit",
+    "test:all": "cross-env ENV=prod playwright test",
+    "test:purchase": "cross-env ENV=prod SLOW_MO=500 playwright test --project=chromium --headed --grep @purchase",
+    "test:cart": "cross-env ENV=prod SLOW_MO=500 playwright test --project=chromium --headed --grep @cart",
+    "test:sorting": "cross-env ENV=prod SLOW_MO=500 playwright test --project=chromium --headed --grep @sorting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adammr221/QA_Automation_Engineer_Take_Home.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adammr221/QA_Automation_Engineer_Take_Home/issues"
+  },
+  "homepage": "https://github.com/adammr221/QA_Automation_Engineer_Take_Home#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.4.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2"
+  }
+}
